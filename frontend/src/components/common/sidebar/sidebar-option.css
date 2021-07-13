@@ -1,0 +1,37 @@
+.sidebar-option{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px 0px;
+    color: #616161;
+}
+
+.sidebar-label{
+    font-size: 15px;
+
+}
+
+.sidebar-icoon{
+    font-size: 50px;
+
+}
+
+.active{
+    color: #6264a7;
+    border-left: 6px solid #6264a7;
+}
+
+.sidebar-option:hover{
+    color: #6264a7;
+}
+
+.sidebar{
+    width: 99%;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 102%;
+}

@@ -1,0 +1,25 @@
+from bs4 import BeautifulSoup as bs
+
+import requests
+link='https://www.amazon.in/OnePlus-Mirror-Black-128GB-Storage/product-reviews/B07DJHV6VZ/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+
+page = requests.get(link)
+page
+
+soup = bs(page.content,'html.parser')
+print(soup.prettify())
+names = soup.find_all('span',class_='a-profile-name')
+names
+
+cust_name = []
+for i in range(0,len(names)):
+    cust_name.append(names[i].get_text())
+cust_name
+
+title = soup.find_all('a',class_='review-title-content')
+title
+
+import pandas as pd
+df = pd.DataFrame()
+df['Customer Name']=cust_name
+df
